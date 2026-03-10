@@ -1,14 +1,14 @@
 ACTION=="change", KERNEL=="BAT[0-9]", \
 SUBSYSTEM=="power_supply", \
 ATTR{status}=="Discharging", \
-ATTR{capacity}=="[0-9]", \
+ATTR{capacity}=="9", \
 IMPORT{program}="/usr/bin/xpub", \
 RUN+="/bin/su $env{XUSER} -c 'sys_notify battery_level'"
 
 ACTION=="change", KERNEL=="BAT[0-9]", \
 SUBSYSTEM=="power_supply", \
 ATTR{status}=="Discharging", \
-ATTR{capacity}=="1[0-9]", \
+ATTR{capacity}=="19", \
 IMPORT{program}="/usr/bin/xpub", \
 RUN+="/bin/su $env{XUSER} -c 'sys_notify battery_level'"
 
